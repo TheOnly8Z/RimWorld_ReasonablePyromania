@@ -5,8 +5,7 @@ Revamp the Pyromaniac trait to be a double-edged sword, retaining its volatile a
 
 **This mod is WIP and not yet usable.**
 
-# Trait Changes
-## Description
+# Trait Overview
 *"NAME loves fire and has a constant need for it in their lives. If their need for fire is sated, they are happier and work harder; otherwise they will start fires randomly, or in extreme cases, self-immolate."*
 
 ## Firefighting
@@ -14,12 +13,12 @@ Revamp the Pyromaniac trait to be a double-edged sword, retaining its volatile a
 
 Pyromaniac trait no longer disables firefighting. However, pawns with this trait default to no firefighting work, as it still carries consequences (see **Fire Need** and **Moodlet**).
 
-## Fire Starting Spree
-*"Ehh, I don't feel like setting this antigrain mortar shell on fire today. Maybe I'll stare at that campfire instead."*
+## Mental Breaks
+*"Ehh, I'm not made enough to set this antigrain mortar shell on fire today. Maybe I'll stare at that torch instead."*
 
-No longer randomly enters this mental state.
+No longer randomly enters fire starting spree. Instead, it is governed by a **Fire Need**.
 
-Pyromaniacs also have unique mental breaks (in addition to fire starting spree) that may happen instead of regular ones when mood is low (see **Mental Break**)
+Pyromaniacs now have new unique mental breaks (in addition to fire starting spree) that may happen instead of regular ones when mood is low (see **Mental Break**)
 
 ## Opinion
 *"We're the duo who will light this rim ablaze!"*
@@ -29,9 +28,11 @@ Pyromaniacs gain +20 opinion towards fellow pyromaniacs.
 ## Lit on Fire
 *"The flames and I are one!"*
 
-When on fire, pyromaniacs do not panic unless the fire reaches size 100.
+When on fire, pyromaniacs do not panic unless the fire reaches size 100. They are also fine with putting themselves out and don't get a mood penalty from doing so.
 
-# Fire Piles
+# Buildings
+
+## Fire Piles
 *"Look at the flames flicker!"*
 
 A unique building built by pyromaniacs automatically. They cost no resources, give out light and heat like a campfire, but can't be used to cook. If left alone, it will burn out safely in a day or two.
@@ -42,19 +43,33 @@ Deconstructing fire piles has a chance to cause fires (15%), and will also reduc
 
 As a recreational action, pyromaniacs may choose to build a fire pile outdoors (like building snowmen). They can also view fire piles and other man-made fires as recreation.
 
+## Man-made Fires
+TBD
+
 # Fire Need
 *"We live by fire and die by fire!"*
 
-Pyromaniacs have a unique needs bar, "Fire". This meter rapidly increases when they see or start fires, and slowly decreases when there isn't any. Additionally, putting out a fire will reduce this meter.
+Pyromaniacs have a unique need, "Fire", representing their passionate love of it, and how much of that need is met.
 
-Below certain thresholds, pyromaniac pawns will get increasingly more destructive mental breaks. However, if they are satsified with their fire need, they are actually more productive and happy.
+Actions that increase this meter:
+- Seeing a fire or man-made fire building
+- Setting things on fire
+- Killing with incendiary weapons
+
+Actions that decrease this meter:
+- Passively over time
+- Seeing firefoam poppers
+- Putting out fires (except self)
+- Being in the darkness
+
+Below certain thresholds, pyromaniac pawns will get increasingly more destructive mental breaks. However, if they are fully satisfied, they are actually more productive and happy than regular pawns.
 
 There are five need levels:
-- **Desperate** (<1%): Self-immolation (mtb 15 days); -30 mood
-- **Demand** (1-20%): Fire starting spree (mtb 30 days); -15 mood
-- **Desire** (21%-45%): Fire compulsion (mtb 45 days); -5 mood 
-- **Want** (46-75%): Fire watching (mtb 60 days)
-- **Satsified**: Global work speed +10%; +5 mood
+- **Desperate** (< 1%): Self-immolation (mtb 15 days); -30 mood
+- **Demand** (< 20%): Fire starting spree (mtb 30 days); -15 mood
+- **Desire** (< 45%): Fire compulsion (mtb 45 days); -5 mood 
+- **Want** (< 75%): Fire watching (mtb 90 days)
+- **Satisfied**: Global work speed +10%; +5 mood
 
 # Mental Break
 *"Fine, I'll make some fire of my own!"*
@@ -63,7 +78,7 @@ Pyromaniacs no longer exclusively use Fire starting spree as their mental break.
 
 ## Mental States
 
-Several new mental states that correspond to break levels. They can trigger as mental break, or randomly if the fire need is not satsified.
+Several new mental states that correspond to break levels. They can trigger as mental break, or randomly if the fire need is not satisfied.
 
 ### Self-immolation
 Only occurs if fire need is below 1%, and never as a mental break.
@@ -115,10 +130,15 @@ Stackable 3x (0.9x multiplier). Any insectoid that dies when on fire counts.
 ### (+5) Holding an incendiary weapon
 Already exists in and is identical to vanilla, listed here for completionness.
 
-### (-3) Put out a fire
+### (-2) Put out a fire
 *"I was born to start fires, not stop them. This sucks."*
 
-Stacksable 4x (1.2x multiplier) for each fire the pawn put out. Does not apply when putting themselves out of fire.
+Stacksable 5x (1.2x multiplier) for each fire the pawn put out. Does not apply when putting themselves out of fire.
+
+### (-3) Saw firefoam poppers
+*"Ugh, this thing douses my fire as much as it douses regular fires."*
+
+Stackable 3x (0.5x multiplier).
 
 ### (-8) Pyromaniac in darkness
 *"This place needs to be lit up - literally."*

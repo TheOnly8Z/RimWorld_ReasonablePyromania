@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FireDesireCategory.cs" />
+    <Compile Include="JobGiver_RunRandomFire.cs" />
     <Compile Include="MentalState_FireWatching.cs" />
     <Compile Include="MentalState_FireCompulsion.cs" />
     <Compile Include="Need_Fire.cs" />
