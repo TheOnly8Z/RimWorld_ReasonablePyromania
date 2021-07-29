@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <NeedDef>
+    <defName>Fire</defName>
+    <needClass>Need_Fire</needClass>
+    <label>fire</label>
+    <description>Pyromaniacs have a need for fire. Seeing or starting fires will quickly improve this need. If this need is not satisfied, the pawn may decide to start fires impulsively.</description>
+    <listPriority>50</listPriority>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+    <fallPerDay>0.071</fallPerDay>
+  </NeedDef>
+</Defs>
