@@ -14,7 +14,7 @@ Revamp the Pyromaniac trait to be a double-edged sword, retaining its volatile a
 Pyromaniac trait no longer disables firefighting. However, pawns with this trait default to no firefighting work, as it still carries consequences (see **Fire Need** and **Moodlet**).
 
 ## Mental Breaks
-*"Ehh, I'm not made enough to set this antigrain mortar shell on fire today. Maybe I'll stare at that torch instead."*
+*"Ehh, I'm not mad enough to set this antigrain mortar shell on fire today. Maybe I'll stare at that torch instead."*
 
 No longer randomly enters fire starting spree. Instead, it is governed by a **Fire Need**.
 
